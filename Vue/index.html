@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Todos</title>
+    <script src="js/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Todos</h1>
+        <div v-for="todo in todos">
+            <input type="checkbox" v-model="todo.done">
+            <input type="text" v-model="todo.text" :disabled="todo.done">
+        </div>
+        <p>{{message}}</p>
+        <button @click="add">新增事項</button>
+        <button @click="clear">清除完成事項</button>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
